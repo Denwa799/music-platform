@@ -1,3 +1,7 @@
 .TrackProgress {
   display: flex;
+
+  .number {
+    min-width: 70px;
+  }
 }

@@ -12,12 +12,12 @@ const TrackProgress: FC<ITrackProgress> = ({left, right, onChange}) => {
         <div className={styles.TrackProgress}>
             <input
                 type="range"
-                min={left}
+                min={0}
                 max={right}
                 value={left}
                 onChange={onChange}
             />
-            <div>{left} / {right}</div>
+            <div className={styles.number}>{left} / {right}</div>
         </div>
     );
 };

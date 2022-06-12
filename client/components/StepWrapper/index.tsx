@@ -1,5 +1,5 @@
+import {Card, Grid, StepLabel, Stepper, Step } from '@mui/material';
 import Container from 'layouts/Container/index';
-import {Card, Grid, Step, StepLabel, Stepper } from 'node_modules/@mui/material/index';
 import React, {FC, ReactNode} from 'react';
 import styles from './styles.module.scss'
 

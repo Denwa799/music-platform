@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import MainLayout from "layouts/MainLayout/index";
-import StepWrapper from "components/StepWrapper/index";
-import {Button, Grid, TextField} from 'node_modules/@mui/material/index';
+import MainLayout from "layouts/MainLayout";
+import StepWrapper from "components/StepWrapper";
 import styles from './styles.module.scss';
-import FileUpload from 'components/FileUpload/index';
+import FileUpload from 'components/FileUpload';
+import {Button, Grid, TextField } from '@mui/material';
 
 const Create = () => {
     const [activeStep, setActiveStep] = useState(0);

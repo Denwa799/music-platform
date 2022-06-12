@@ -1,7 +1,7 @@
-import {Box, Grid } from 'node_modules/@mui/material/index';
+import {Box, Grid } from '@mui/material';
 import React, {FC} from 'react';
 import {ITrack} from "types/track";
-import TrackItem from './TrackItem/index';
+import TrackItem from './TrackItem';
 
 interface ITrackList {
     tracks: ITrack[];

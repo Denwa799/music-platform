@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MainLayout from "layouts/MainLayout/index";
+import MainLayout from "layouts/MainLayout";
 import styles from './styles.module.scss';
 
 const Index = () => {

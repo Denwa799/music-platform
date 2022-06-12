@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 import { ITrack } from 'types/track';
-import { Card, Grid, IconButton } from 'node_modules/@mui/material/index';
 import styles from './styles.module.scss';
-import {Delete, Pause, PlayArrow } from 'node_modules/@mui/icons-material/index';
-import {useRouter} from "node_modules/next/router";
+import { Card, Grid, IconButton } from '@mui/material';
+import {Delete, Pause, PlayArrow} from '@mui/icons-material';
+import { useRouter } from 'next/router';
+import {useActions} from "../../hooks/useActions";
 
 interface ITrackItem {
     track: ITrack;
@@ -12,16 +13,23 @@ interface ITrackItem {
 
 const TrackItem: FC<ITrackItem> = ({track, active = false}) => {
     const router = useRouter();
+    const {playTrack, setActiveTrack} = useActions();
+
+    const play = (event) => {
+        event.stopPropagation();
+        setActiveTrack(track);
+        playTrack();
+    }
 
     return (
         <Card className={styles.TrackItem} onClick={() => router.push('/tracks/' + track._id)}>
-            <IconButton onClick={e => e.stopPropagation()}>
+            <IconButton onClick={play}>
                 {active
                 ? <Pause/>
                 : <PlayArrow/>
                 }
             </IconButton>
-            <img className={styles.img} src={track.picture} />
+            <img className={styles.img} src={track.picture} alt={track.name} />
             <Grid className={styles.trackContainer} container direction="column">
                 <div>{track.name}</div>
                 <div className={styles.artist}>{track.artist}</div>
