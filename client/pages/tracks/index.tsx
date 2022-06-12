@@ -1,7 +1,7 @@
 import { useRouter } from 'node_modules/next/router';
 import React from 'react';
 import {Box, Button, Card, Grid } from 'node_modules/@mui/material/index';
-import MainLayout from 'layouts/MainLayout';
+import MainLayout from 'layouts/MainLayout/index';
 import {ITrack} from "types/track";
 import TrackList from 'components/TrackList';
 

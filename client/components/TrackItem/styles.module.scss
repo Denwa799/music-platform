@@ -1,0 +1,29 @@
+.TrackItem {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-left: 10px;
+  }
+
+  .trackContainer {
+    width: 200px;
+    text-align: left;
+    margin: 0 20px;
+  }
+
+  .artist {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .deleteBtn {
+    margin-left: auto;
+  }
+}

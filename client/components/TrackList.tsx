@@ -1,7 +1,7 @@
 import {Box, Grid } from 'node_modules/@mui/material/index';
 import React, {FC} from 'react';
 import {ITrack} from "types/track";
-import TrackItem from './TrackItem';
+import Index from './TrackItem/index';
 
 interface ITrackList {
     tracks: ITrack[];
@@ -12,7 +12,7 @@ const TrackList: FC<ITrackList> = ({tracks}) => {
         <Grid container direction="column">
             <Box p={2}>
                 {tracks.map(track =>
-                    <TrackItem
+                    <Index
                         key={track._id}
                         track={track}
                     />

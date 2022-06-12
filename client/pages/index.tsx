@@ -1,28 +1,16 @@
 import * as React from 'react';
-import MainLayout from "layouts/MainLayout";
+import MainLayout from "layouts/MainLayout/index";
+import styles from './styles.module.scss';
 
 const Index = () => {
     return (
         <>
             <MainLayout>
-                <div className="center">
+                <div className={styles.center}>
                     <h1>Добро пожаловать!</h1>
                     <h3>Здесь собраны лучшие треки!</h3>
                 </div>
             </MainLayout>
-
-
-            <style jsx>
-                {`
-                    .center {
-                        margin-top: 150px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                    }
-                `}
-            </style>
         </>
     );
 };
