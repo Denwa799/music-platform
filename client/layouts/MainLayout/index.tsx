@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 import Navbar from "components/Navbar";
-import styles from './styles.module.scss';
+import Container from "../Container/index";
 
 interface IMainLayout {
     children: ReactNode
@@ -10,9 +10,9 @@ const MainLayout: FC<IMainLayout> = ({children}) => {
     return (
         <>
             <Navbar/>
-            <div className={styles.container}>
+            <Container>
                 {children}
-            </div>
+            </Container>
         </>
     );
 };
