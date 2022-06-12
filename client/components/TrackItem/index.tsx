@@ -29,7 +29,7 @@ const TrackItem: FC<ITrackItem> = ({track, active = false}) => {
                 : <PlayArrow/>
                 }
             </IconButton>
-            <img className={styles.img} src={track.picture} alt={track.name} />
+            <img className={styles.img} src={'http://localhost:5000/' + track.picture} alt={track.name} />
             <Grid className={styles.trackContainer} container direction="column">
                 <div>{track.name}</div>
                 <div className={styles.artist}>{track.artist}</div>
