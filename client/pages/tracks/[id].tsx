@@ -29,7 +29,7 @@ const TrackPage = ({serverTrack}) => {
     }
 
     return (
-        <MainLayout>
+        <MainLayout title={track.name + " - " + track.artist} description={"Песня от " + track.artist} keywords={"трек, музыка, лучшее, " + track.artist}>
             <div className={styles.TrackPage}>
                 <Button variant="outlined"
                         className={styles.button}
